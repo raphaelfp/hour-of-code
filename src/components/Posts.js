@@ -32,7 +32,9 @@ class Posts extends React.Component {
 							handleInput={this.handleInput}
 						/>
 					))}
-					<Button onClick={this.submitForm}>Enviar</Button>
+					<Button primary onClick={this.submitForm}>
+						Enviar
+					</Button>
 				</Form>
 				{this.state.message && <CustomMessage {...this.state.message} />}
 			</Container>
