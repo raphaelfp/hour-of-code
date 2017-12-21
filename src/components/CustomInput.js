@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
+import { Form } from 'semantic-ui-react';
 
 class CustomInput extends React.Component {
 	state = { value: '' };
@@ -13,17 +13,14 @@ class CustomInput extends React.Component {
 	render() {
 		const { type, label, handleInput, id } = this.props;
 		return (
-			<FormGroup controlId={id}>
-				<ControlLabel>{label}</ControlLabel>
-				<FormControl
-					id={id}
-					type={type}
-					value={this.state.value}
-					label={label}
-					placeholder={label}
-					onChange={event => this.handleChange(event, handleInput)}
-				/>
-			</FormGroup>
+			<Form.Input
+				id={id}
+				label={label}
+				type={type}
+				value={this.state.value}
+				placeholder={label}
+				onChange={event => this.handleChange(event, handleInput)}
+			/>
 		);
 	}
 }
