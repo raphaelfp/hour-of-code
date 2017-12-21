@@ -1,10 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Posts from './components/Posts';
 
-class App extends Component {
+const style = {
+	app: {
+		marginTop: '20px'
+	}
+};
+
+class App extends React.Component {
 	render() {
 		return (
-			<div>
-				<h1>Hello World!!!</h1>
+			<div style={style.app}>
+				<Posts />
 			</div>
 		);
 	}
